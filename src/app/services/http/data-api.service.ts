@@ -30,4 +30,8 @@ export class DataApiService {
   getBase64CV(): Promise<any> {
     return this.http.get('assets/media/base64/CV.json').toPromise();
   }
+
+  getBase64Diplome(): Promise<any> {
+    return this.http.get('assets/media/base64/Diplome.json').toPromise();
+  }
 }

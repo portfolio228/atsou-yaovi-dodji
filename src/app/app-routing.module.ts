@@ -14,6 +14,9 @@ const routes: Routes = [
     path: '', component: HomeComponent
   },
   {
+    path: 'atsou-yaovi-dodji', redirectTo: '/', pathMatch: 'full'
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }
