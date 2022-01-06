@@ -3,24 +3,19 @@
   "location": "Bè Klikamé, Lomé, TOGO",
   "name": "Dodji Yaovi ATSOU",
   "phone": "+228 91 92 03 69",
-  "avatar": "assets/media/images/pro_offerzen.jpg",
+  "avatar": "assets/media/images/avatar.jpg",
   "education": [
     {
       "title": "Licence en Audit-comptabilité et contrôle (LMD)",
       "meta": "Université publique du Togo (Lomé) à la Faculté des Sciences\nEconomiques et de Gestion (FASEG), Jul 2012"
     }
   ],
-  "about": "Facilité à travailler avec des chiffres dans le système\ninformatique, en équipe et à établir des documents comptables sincères et fiables. Je\npossède d’excellentes qualités pour traiter avec rigueur les pièces comptables. Habileté à\ndétecter des anomalies dans les procédures et proposer une résolution des écarts dans les\nopérations financières. Excellentes aptitudes à la technologie : (Assimile rapidement les\napplications et les nouvelles méthodologies telles que : SAARI, SAF, Tompro et Excel, Word\net Powerpoint)",
+  "about": "Facilité à travailler avec des chiffres dans le système informatique, en équipe et à établir des documents comptables sincères et fiables.\nJe possède d’excellentes qualités pour traiter avec rigueur les pièces comptables.\nHabileté à détecter des anomalies dans les procédures et proposer une résolution des écarts dans les opérations financières.\nExcellentes aptitudes à la technologie : (Assimile rapidement les applications et les nouvelles méthodologies telles que : SAARI, SAF, Tompro et Excel, Word et Powerpoint)",
   "socials": [
     {
       "name": "benedite2012@gmail.com",
       "link": "mailto:benedite2012@gmail.com",
       "icon": "fa fa-envelope"
-    },
-    {
-      "name": "Github",
-      "link": "https://github.com/",
-      "icon": "fab fa-github"
     },
     {
       "name": "LinkedIn",

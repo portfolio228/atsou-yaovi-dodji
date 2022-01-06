@@ -1,5 +1,6 @@
 import { DataApiService } from './../../services/http/data-api.service';
 import { Component, OnInit, HostListener } from '@angular/core';
+import {DownloadData} from '../../interfaces/resume.interface';
 
 @Component({
   selector: 'app-home',
@@ -49,35 +50,25 @@ export class HomeComponent implements OnInit {
     console.log('PROFILE', this.profile);
 
   }
-
-  async downloadResume(): Promise<void> {
-    const pdf: any =  await this.dataApi.getBase64CV();
-    const byteCharacters = atob(pdf.resume);
-    const byteNumbers = new Array(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-      byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-    const file = new Blob([byteArray], { type: 'application/pdf;base64' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(file);
-    a.setAttribute('download', `${this.profile.name} CV.pdf`.replace(/\s/g, ''));
-    a.click();
+  // tslint:disable-next-line:typedef
+  downloadPdf(base64String, fileName) {
+    const source = `data:application/pdf;base64,${base64String}`;
+    const link = document.createElement('a');
+    link.href = source;
+    link.download = `${fileName}.pdf`;
+    link.click();
   }
 
-  async downloadDiplome(): Promise<void> {
-    const pdf: any =  await this.dataApi.getBase64Diplome();
-    const byteCharacters = atob(pdf.resume);
-    const byteNumbers = new Array(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-      byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-    const file = new Blob([byteArray], { type: 'application/pdf;base64' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(file);
-    a.setAttribute('download', `${this.profile.name} Diplome.pdf`.replace(/\s/g, ''));
-    a.click();
+  // tslint:disable-next-line:typedef
+  onClickDownloadPdf(){
+    const base64String = DownloadData.CV;
+    this.downloadPdf(base64String, `${this.profile.name} _CV.pdf`.replace(/\s/g, ''));
+  }
+
+  // tslint:disable-next-line:typedef
+  onClickDownloadDiplome(){
+    const base64String = DownloadData.diplome;
+    this.downloadPdf(base64String, `${this.profile.name} _Diplome.pdf`.replace(/\s/g, ''));
   }
 
 }
